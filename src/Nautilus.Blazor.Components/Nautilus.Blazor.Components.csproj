@@ -16,5 +16,6 @@
   <ItemGroup>
     <Folder Include="DataGrid\" />
     <Folder Include="Component1Component\" />
+    <Folder Include="Dropdown\" />
   </ItemGroup>
 </Project>

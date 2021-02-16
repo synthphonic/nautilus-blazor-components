@@ -1,0 +1,19 @@
+﻿<InputSelect class="textbox" @bind-Value="@BindValue">
+    @*<option value="@(Guid.Empty)" selected>Select a tag</option>*@
+    @foreach (var item in Items)
+    {
+        <option value="@item.Id">@item.DisplayName</option>
+    }
+</InputSelect>
+<ValidationMessage For="@(() => SelectedId)" />
+
+@code {
+    [Parameter]
+    public IEnumerable<DropdownItem> Items { get; set; }
+
+    [Parameter]
+    public string SelectedId { get; set; }
+
+    [Parameter]
+    public string BindValue { get; set; }
+}
